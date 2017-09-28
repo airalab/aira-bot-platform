@@ -1,0 +1,27 @@
+# Resolver to choose a 'specific' stackage snapshot or a compiler version.
+resolver: lts-9.2
+
+nix:
+  packages: [zlib mysql postgresql openssl pkgconfig pcre]
+
+# User packages to be built.
+packages:
+- '.'
+- 'habit'
+
+# Dependency packages to be pulled from upstream that are not in the resolver
+# (e.g., acme-missiles-0.3)
+extra-deps:
+- fbmessenger-api-0.1.2.1
+- telegram-api-0.6.3.0
+- servant-client-0.10
+- servant-server-0.10
+- servant-0.10
+- web3-0.5.5.0
+
+
+# Override default flag values for local packages and extra-deps
+flags: {}
+
+# Extra package databases containing global packages
+extra-package-dbs: []
